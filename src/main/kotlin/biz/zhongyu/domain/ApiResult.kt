@@ -35,32 +35,26 @@ class ApiResult : Serializable {
 
     companion object {
 
-        @JvmStatic
         fun success(): ApiResult {
             return ApiResult()
         }
 
-        @JvmStatic
         fun success(data: Any?): ApiResult {
             return ApiResult(data)
         }
 
-        @JvmStatic
         fun failure(result: ResultEnum): ApiResult {
             return ApiResult(result.code, result.message)
         }
 
-        @JvmStatic
         fun failure(code: Int?, message: String?): ApiResult {
             return ApiResult(code, message)
         }
 
-        @JvmStatic
         fun failure(result: ResultEnum, data: Any?): ApiResult {
             return ApiResult(result.code, result.message, data)
         }
 
-        @JvmStatic
         fun failure(code: Int?, message: String?, data: Any?): ApiResult {
             return ApiResult(code, message, data)
         }

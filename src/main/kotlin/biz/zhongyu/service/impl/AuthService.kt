@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service
 /**
  * @author yuzhong
  * @date 2020/1/14
- * @desc 只定义UserDetailsService
+ * @desc 自定义UserDetailsService
  */
 @Service
 class AuthService(private val userRepository: UserRepository) : UserDetailsService {
